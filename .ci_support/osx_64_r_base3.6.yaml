@@ -15,7 +15,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '10'
 freetype:
-- 2.9.1
+- '2'
 harfbuzz:
 - '2'
 macos_machine:
