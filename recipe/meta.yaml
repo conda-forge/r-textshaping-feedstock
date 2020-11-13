@@ -1,4 +1,4 @@
-{% set version = "0.1.2" %}
+{% set version = "0.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/textshaping_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/textshaping/textshaping_{{ version }}.tar.gz
-  sha256: 4c8de243d21d70d84056d347daf29ae8db1d74c2058d8cfe3f578940e02ac00c
+  sha256: 08dfaeb28c05be49bbb0019405a81f57b37de2d24604fb9be4409fc45c48623b
 
 build:
   merge_build_host: true  # [win]
