@@ -15,7 +15,6 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -36,10 +35,9 @@ requirements:
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-
   host:
     - r-base
-    - r-cpp11
+    - r-cpp11 >=0.2.1
     - r-systemfonts >=0.3.0
     - freetype
     - harfbuzz
@@ -48,7 +46,7 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-cpp11
+    - r-cpp11 >=0.2.1
     - r-systemfonts >=0.3.0
     - freetype
     - harfbuzz
@@ -61,10 +59,11 @@ test:
 
 about:
   home: https://github.com/r-lib/textshaping
-
   license: MIT
-  summary: Provides access to the text shaping functionality in the 'HarfBuzz' library and the bidirectional algorithm in the 'Fribidi' library. 'textshaping' is a low-level utility package mainly for graphic devices that expands upon the font tool-set provided by the 'systemfonts' package.
-
+  summary: Provides access to the text shaping functionality in the 'HarfBuzz' library and the
+    bidirectional algorithm in the 'Fribidi' library. 'textshaping' is a low-level utility
+    package mainly for graphic devices that expands upon the font tool-set provided
+    by the 'systemfonts' package.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
@@ -76,23 +75,24 @@ extra:
 
 # Package: textshaping
 # Title: Bindings to the 'HarfBuzz' and 'Fribidi' Libraries for Text Shaping
-# Version: 0.1.1
+# Version: 0.2.1
 # Authors@R: c( person("Thomas Lin", "Pedersen", , "thomas.pedersen@rstudio.com", c("cre", "aut"), comment = c(ORCID = "0000-0002-5147-4711")), person("RStudio", role = "cph") )
 # Description: Provides access to the text shaping functionality in the 'HarfBuzz' library and the bidirectional algorithm in the 'Fribidi' library. 'textshaping' is a low-level utility package mainly for graphic devices that expands upon the font tool-set provided by the 'systemfonts' package.
 # License: MIT + file LICENSE
 # Encoding: UTF-8
 # LazyData: true
 # RoxygenNote: 7.1.1
+# Depends: R (>= 3.2.0)
 # Imports: systemfonts (>= 0.3.0)
-# LinkingTo: cpp11, systemfonts
+# LinkingTo: cpp11 (>= 0.2.1), systemfonts
 # SystemRequirements: C++11, freetype2, harfbuzz, fribidi
 # URL: https://github.com/r-lib/textshaping
 # BugReports: https://github.com/r-lib/textshaping/issues
 # Suggests: covr, knitr, rmarkdown
 # VignetteBuilder: knitr
 # NeedsCompilation: yes
-# Packaged: 2020-09-29 19:00:56 UTC; thomas
+# Packaged: 2020-11-12 15:22:08 UTC; thomas
 # Author: Thomas Lin Pedersen [cre, aut] (<https://orcid.org/0000-0002-5147-4711>), RStudio [cph]
 # Maintainer: Thomas Lin Pedersen <thomas.pedersen@rstudio.com>
 # Repository: CRAN
-# Date/Publication: 2020-09-29 19:20:02 UTC
+# Date/Publication: 2020-11-13 06:30:02 UTC
