@@ -11,6 +11,8 @@ source:
     - {{ cran_mirror }}/src/contrib/textshaping_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/textshaping/textshaping_{{ version }}.tar.gz
   sha256: 08dfaeb28c05be49bbb0019405a81f57b37de2d24604fb9be4409fc45c48623b
+  patches:
+    - 0001-Disable-configure-test-command.patch
 
 build:
   merge_build_host: true  # [win]

@@ -1,0 +1,25 @@
+From 5722749d390f581d9488b516e5680cfd984fc386 Mon Sep 17 00:00:00 2001
+From: Daniel Bast <2790401+dbast@users.noreply.github.com>
+Date: Sun, 20 Dec 2020 10:41:16 +0100
+Subject: [PATCH] Disable configure test command
+
+---
+ configure | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index 43351b0..65a7648 100755
+--- a/configure
++++ b/configure
+@@ -50,7 +50,7 @@ CFLAGS="`${R_HOME}/bin/R CMD config CFLAGS`"
+ CPPFLAGS="`${R_HOME}/bin/R CMD config CPPFLAGS`"
+ 
+ # Test configuration
+-echo "$PKG_TEST_HEADER" | ${CC} ${CPPFLAGS} ${PKG_CFLAGS} ${CFLAGS} -E -xc - >/dev/null 2>configure.log
++# echo "$PKG_TEST_HEADER" | ${CC} ${CPPFLAGS} ${PKG_CFLAGS} ${CFLAGS} -E -xc - >/dev/null 2>configure.log
+ 
+ # Customize the error
+ if [ $? -ne 0 ]; then
+-- 
+2.29.2
+
