@@ -1,17 +1,25 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+c_compiler:
+- clang
+c_compiler_version:
+- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cran_mirror:
 - https://cran.r-project.org
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '11'
 freetype:
-- 2.9.1
+- '2'
 harfbuzz:
 - '2'
-m2w64_c_compiler:
-- m2w64-toolchain
-m2w64_cxx_compiler:
-- m2w64-toolchain
+macos_machine:
+- x86_64-apple-darwin13.4.0
 pin_run_as_build:
   freetype:
     max_pin: x
@@ -21,6 +29,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 r_base:
-- '3.6'
+- '4.0'
 target_platform:
-- win-64
+- osx-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
