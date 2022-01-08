@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,6 +43,8 @@ requirements:
     - freetype
     - harfbuzz
     - fribidi
+    - glib  # [osx]
+    - libglib  # [osx]
     - r-cpp11 >=0.2.1
     - r-systemfonts >=1.0.0
   run:
@@ -74,6 +76,7 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
+    - izahn
 
 # Package: textshaping
 # Title: Bindings to the 'HarfBuzz' and 'Fribidi' Libraries for Text Shaping
