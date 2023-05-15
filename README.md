@@ -1,11 +1,22 @@
+About r-textshaping-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-textshaping-feedstock/blob/main/LICENSE.txt)
+
 About r-textshaping
-===================
+-------------------
 
 Home: https://github.com/r-lib/textshaping
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-textshaping-feedstock/blob/main/LICENSE.txt)
+Summary: Provides access to the text shaping functionality in the 'HarfBuzz' library and the bidirectional algorithm in the 'Fribidi' library. 'textshaping' is a low-level utility package mainly for graphic devices that expands upon the font tool-set provided by the 'systemfonts' package.
+About r-textshaping
+-------------------
+
+Home: https://github.com/r-lib/textshaping
+
+Package license: MIT
 
 Summary: Provides access to the text shaping functionality in the 'HarfBuzz' library and the bidirectional algorithm in the 'Fribidi' library. 'textshaping' is a low-level utility package mainly for graphic devices that expands upon the font tool-set provided by the 'systemfonts' package.
 
@@ -13,14 +24,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/r-textshaping-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/r-textshaping-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
