@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/textshaping_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/textshaping/textshaping_{{ version }}.tar.gz
-  sha256: 35e940786bb278560de61bb55d4f46f8c86c878d0461613ceb8c98ba9b239d7a
+  sha256: 65e4511fef27b692c0ff42e86dc732680bf6b4ad7cbb28df05c01efae66c1e48
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
