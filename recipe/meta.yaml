@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,20 +9,24 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/textshaping_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/textshaping/textshaping_{{ version }}.tar.gz
-  sha256: 35e940786bb278560de61bb55d4f46f8c86c878d0461613ceb8c98ba9b239d7a
+  sha256: 65e4511fef27b692c0ff42e86dc732680bf6b4ad7cbb28df05c01efae66c1e48
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
     - r-cpp11                      # [build_platform != target_platform]
+    - r-lifecycle                  # [build_platform != target_platform]
+    - r-stringi                    # [build_platform != target_platform]
     - r-systemfonts                # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
     - {{ stdlib("c") }}            # [not win]
@@ -31,12 +35,12 @@ requirements:
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
-    - {{ posix }}sed               # [win]
+    - {{ posix }}sed
     - {{ posix }}grep              # [win]
     - {{ posix }}autoconf
     - {{ posix }}automake          # [not win]
     - {{ posix }}automake-wrapper  # [win]
-    - {{ posix }}pkg-config
+    - pkg-config
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
@@ -45,17 +49,16 @@ requirements:
     - freetype
     - harfbuzz
     - fribidi
-    - glib     # [osx]
-    - libglib  # [osx]
     - r-cpp11 >=0.2.1
-    - r-systemfonts >=1.0.0
+    - r-lifecycle
+    - r-stringi
+    - r-systemfonts >=1.1.0
   run:
     - r-base
-    - freetype
-    - harfbuzz
-    - fribidi
     - r-cpp11 >=0.2.1
-    - r-systemfonts >=1.0.0
+    - r-lifecycle
+    - r-stringi
+    - r-systemfonts >=1.1.0
 
 test:
   commands:
