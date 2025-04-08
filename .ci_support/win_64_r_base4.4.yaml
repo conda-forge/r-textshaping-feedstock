@@ -6,8 +6,6 @@ cran_mirror:
 - https://cran.r-project.org
 freetype:
 - '2'
-glib:
-- '2'
 harfbuzz:
 - '11'
 m2w64_c_compiler:
