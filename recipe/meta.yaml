@@ -49,8 +49,6 @@ requirements:
     - freetype
     - harfbuzz
     - fribidi
-    - glib
-    - libglib
     - r-cpp11 >=0.2.1
     - r-lifecycle
     - r-stringi
