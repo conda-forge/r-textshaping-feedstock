@@ -7,7 +7,7 @@ cran_mirror:
 freetype:
 - '2'
 harfbuzz:
-- '10'
+- '11'
 m2w64_c_compiler:
 - gcc
 m2w64_c_compiler_version:
