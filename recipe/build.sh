@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# remove PKG_CFLAGS override
+sed -i '/^PKG_CFLAGS="-I\/usr/d' configure
+
 export DISABLE_AUTOBREW=1
 
 # shellcheck disable=SC2086
