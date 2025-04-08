@@ -3,4 +3,4 @@
 export DISABLE_AUTOBREW=1
 
 # shellcheck disable=SC2086
-${R} CMD INSTALL --build . ${R_ARGS}
+${R} CMD INSTALL --build --configure-vars="INCLUDE_DIR=${PREFIX}/include LIB_DIR=${PREFIX}/lib" . ${R_ARGS}
