@@ -52,13 +52,13 @@ requirements:
     - r-cpp11 >=0.2.1
     - r-lifecycle
     - r-stringi
-    - r-systemfonts >=1.1.0
+    - r-systemfonts >=1.3.0
   run:
     - r-base
     - r-cpp11 >=0.2.1
     - r-lifecycle
     - r-stringi
-    - r-systemfonts >=1.1.0
+    - r-systemfonts >=1.3.0
 
 test:
   commands:
